@@ -17,17 +17,16 @@ axios.interceptors.response.use(function (response) {
   return Promise.reject(error);
 });
 
-
 class Http {
-  request(params, callback) {
-    axios({
+  request(params) {
+    return axios({
       url: params.url,
       method: params.method || 'get',
       headers: params.headers || {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        callback && callback(res)
+        return res
       },
       error: function (err) {
         console.log('request error')

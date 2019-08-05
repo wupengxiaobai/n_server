@@ -9,10 +9,9 @@ let storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../public/test/upload'))
     },
     filename: function (req, file, cb) {
-        // console.log(file);
         let ext = file.originalname.substr(file.originalname.indexOf('.'))
+        //  重命名
         tupianName = new Date().getTime() + ext;
-        //设置文件的名字为其原本的名字，也可以添加其他字符，来区别相同文件，例如file.originalname+new Date().getTime();利用时间来区分
         cb(null, tupianName)
     }
 });
