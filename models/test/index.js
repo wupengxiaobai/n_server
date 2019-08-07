@@ -6,7 +6,6 @@ class TestModel {
     limit
   }) {
     let ret = await new Promise((resolve, reject) => {
-      // console.log('page---', page, 'limit---', limit)
       db.query(`select * from test`, (err, ret) => {
         if (err) return reject('db err: ', err)
         resolve(ret)
