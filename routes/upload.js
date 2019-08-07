@@ -1,6 +1,5 @@
 const express = require('express')
-const multer = require('../util/multer')
-const upload = require('../util/multer')
+const upload = require('../utils/multer')
 const router = express.Router()
 
 router.post('/pic', upload.single('file'), async (req, res) => {
