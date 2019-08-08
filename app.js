@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 //  配置跨域
 app.use(cors())
 
-app.use('/test', testRoute)
+app.use('/api/test', testRoute)
 app.use('/upload', uploadRoute)
 
 app.use('*', async (req, res) => {

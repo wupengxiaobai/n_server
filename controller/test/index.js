@@ -12,10 +12,6 @@ class TestController {
       page,
       limit
     })
-    data.data.push({
-      id: 520,
-      msg: 'testdata push'
-    })
     return data
   }
 }
