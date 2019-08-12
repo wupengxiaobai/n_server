@@ -4,7 +4,7 @@ const config = {
 }
 
 const baseConfig = {
-  port: 3005
+  port: 5000
 }
 
 module.exports = {
